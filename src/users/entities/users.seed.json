@@ -1,0 +1,62 @@
+[
+    {
+        "email": "john@gmail.com",
+        "username": "johnd",
+        "password": "password",
+        "role": "admin"
+    },
+    {
+        "email": "morrison@gmail.com",
+        "username": "mor_2314",
+        "password": "password",
+        "role": "customer"
+    },
+    {
+        "email": "kevin@gmail.com",
+        "username": "kevinryan",
+        "password": "password",
+        "role": "customer"
+    },
+    {
+        "email": "don@gmail.com",
+        "username": "donero",
+        "password": "password",
+        "role": "customer"
+    },
+    {
+        "email": "derek@gmail.com",
+        "username": "derek",
+        "password": "password",
+        "role": "customer"
+    },
+    {
+        "email": "david_r@gmail.com",
+        "username": "david_r",
+        "password": "password",
+        "role": "customer"
+    },
+    {
+        "email": "miriam@gmail.com",
+        "username": "snyder",
+        "password": "password",
+        "role": "customer"
+    },
+    {
+        "email": "william@gmail.com",
+        "username": "hopkins",
+        "password": "password",
+        "role": "customer"
+    },
+    {
+        "email": "kate@gmail.com",
+        "username": "kate_h",
+        "password": "password",
+        "role": "customer"
+    },
+    {
+        "email": "jimmie@gmail.com",
+        "username": "jimmie_k",
+        "password": "password",
+        "role": "customer"
+    }
+]
