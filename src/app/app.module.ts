@@ -19,7 +19,8 @@ import serverConfig from '@/config/server';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      // envFilePath: '.env.production',
+      envFilePath:
+        process.env.NODE_ENV === 'production' ? '.env.production' : '.env',
       // ignoreEnvFile: true,
       isGlobal: true,
       load: [authConfig, databaseConfig, serverConfig],
@@ -34,8 +35,13 @@ import serverConfig from '@/config/server';
         // const dbPassword = this.configService.get('database.password');
         // const dbName = this.configService.get('database.name');
 
+        const uri =
+          process.env.NODE_ENV === 'development'
+            ? `mongodb://${process.env.DATABASE_HOST}:${process.env.DATABASE_PORT}/${process.env.DATABASE_NAME}`
+            : process.env.DATABASE_CONNECTION_STRING;
+
         return {
-          uri: `mongodb://${process.env.DATABASE_HOST}:${process.env.DATABASE_PORT}/${process.env.DATABASE_NAME}`,
+          uri,
           // useNewUrlParser: true,
           // useUnifiedTopology: true,
         };

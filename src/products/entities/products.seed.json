@@ -8,7 +8,8 @@
         "rating": {
             "rate": 3.9,
             "count": 120
-        }
+        },
+        "reviews": []
     },
     {
         "title": "Mens Casual Premium Slim Fit T-Shirts ",
@@ -19,7 +20,8 @@
         "rating": {
             "rate": 4.1,
             "count": 259
-        }
+        },
+        "reviews": []
     },
     {
         "title": "Mens Cotton Jacket",
@@ -30,7 +32,8 @@
         "rating": {
             "rate": 4.7,
             "count": 500
-        }
+        },
+        "reviews": []
     },
     {
         "title": "Mens Casual Slim Fit",
@@ -41,7 +44,8 @@
         "rating": {
             "rate": 2.1,
             "count": 430
-        }
+        },
+        "reviews": []
     },
     {
         "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
@@ -52,7 +56,8 @@
         "rating": {
             "rate": 4.6,
             "count": 400
-        }
+        },
+        "reviews": []
     },
     {
         "title": "Solid Gold Petite Micropave ",
@@ -63,7 +68,8 @@
         "rating": {
             "rate": 3.9,
             "count": 70
-        }
+        },
+        "reviews": []
     },
     {
         "title": "White Gold Plated Princess",
@@ -74,7 +80,8 @@
         "rating": {
             "rate": 3,
             "count": 400
-        }
+        },
+        "reviews": []
     },
     {
         "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
@@ -85,7 +92,8 @@
         "rating": {
             "rate": 1.9,
             "count": 100
-        }
+        },
+        "reviews": []
     },
     {
         "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
@@ -96,7 +104,8 @@
         "rating": {
             "rate": 3.3,
             "count": 203
-        }
+        },
+        "reviews": []
     },
     {
         "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
@@ -107,7 +116,8 @@
         "rating": {
             "rate": 2.9,
             "count": 470
-        }
+        },
+        "reviews": []
     },
     {
         "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
@@ -118,7 +128,8 @@
         "rating": {
             "rate": 4.8,
             "count": 319
-        }
+        },
+        "reviews": []
     },
     {
         "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
@@ -129,7 +140,8 @@
         "rating": {
             "rate": 4.8,
             "count": 400
-        }
+        },
+        "reviews": []
     },
     {
         "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
@@ -140,7 +152,8 @@
         "rating": {
             "rate": 2.9,
             "count": 250
-        }
+        },
+        "reviews": []
     },
     {
         "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
@@ -151,7 +164,8 @@
         "rating": {
             "rate": 2.2,
             "count": 140
-        }
+        },
+        "reviews": []
     },
     {
         "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
@@ -162,7 +176,8 @@
         "rating": {
             "rate": 2.6,
             "count": 235
-        }
+        },
+        "reviews": []
     },
     {
         "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
@@ -173,7 +188,8 @@
         "rating": {
             "rate": 2.9,
             "count": 340
-        }
+        },
+        "reviews": []
     },
     {
         "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
@@ -184,7 +200,8 @@
         "rating": {
             "rate": 3.8,
             "count": 679
-        }
+        },
+        "reviews": []
     },
     {
         "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
@@ -195,7 +212,8 @@
         "rating": {
             "rate": 4.7,
             "count": 130
-        }
+        },
+        "reviews": []
     },
     {
         "title": "Opna Women's Short Sleeve Moisture",
@@ -206,7 +224,8 @@
         "rating": {
             "rate": 4.5,
             "count": 146
-        }
+        },
+        "reviews": []
     },
     {
         "title": "DANVOUY Womens T Shirt Casual Cotton Short",
@@ -217,6 +236,7 @@
         "rating": {
             "rate": 3.6,
             "count": 145
-        }
+        },
+        "reviews": []
     }
 ]
