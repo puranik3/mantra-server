@@ -22,6 +22,7 @@ import { AddReviewDto } from './dto/add-review.dto';
 // import { AppHttpExceptionFilter } from '@/exceptions/app-http-exception.filter';
 
 import { AuthGuard } from '@/auth/auth.guard';
+import { auth } from '@/auth/role.helper';
 
 @Controller('products')
 export class ProductsController {
@@ -30,7 +31,9 @@ export class ProductsController {
   @UseGuards(AuthGuard)
   @Post()
   // @UseFilters(new AppHttpExceptionFilter())
-  async create(@Body() product: CreateProductDto) {
+  async create(@Body() product: CreateProductDto, @Request() request: Request) {
+    auth(request, 'admin');
+
     try {
       const model = await this.productsService.create(product);
       return model;
@@ -71,8 +74,14 @@ export class ProductsController {
 
   @UseGuards(AuthGuard)
   @Patch(':id')
-  async update(@Param('id') id: string, @Body() product: UpdateProductDto) {
+  async update(
+    @Param('id') id: string,
+    @Body() product: UpdateProductDto,
+    @Request() request: Request,
+  ) {
     try {
+      auth(request, 'admin');
+
       const data = await this.productsService.update(id, product);
 
       if (!data) {
@@ -93,7 +102,9 @@ export class ProductsController {
   @UseGuards(AuthGuard)
   @Delete(':id')
   @HttpCode(204)
-  async remove(@Param('id') id: string) {
+  async remove(@Param('id') id: string, @Request() request: Request) {
+    auth(request, 'admin');
+
     try {
       const data = await this.productsService.remove(id);
 
@@ -141,6 +152,8 @@ export class ProductsController {
     @Request() request: Request,
   ) {
     try {
+      auth(request, 'customer');
+
       const { username } = request['user'];
       const data = await this.productsService.addReview(id, review, username);
 

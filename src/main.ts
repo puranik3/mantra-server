@@ -4,6 +4,7 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { Logger } from '@nestjs/common';
 import helmet from 'helmet';
 import { AppModule } from './app/app.module';
+// import { RolesGuard } from '@/auth/roles.guard';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
@@ -14,6 +15,8 @@ async function bootstrap() {
   app.enableCors({
     origin: '*',
   });
+
+  // app.useGlobalGuards(new RolesGuard());
 
   const config = new DocumentBuilder()
     .setTitle('Mantra - Online store')

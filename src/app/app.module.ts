@@ -1,4 +1,5 @@
 import { Module, Logger } from '@nestjs/common';
+// import { APP_GUARD } from '@nestjs/core';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 
@@ -6,6 +7,7 @@ import mongoose from 'mongoose';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+// import { RolesGuard } from '@/auth/roles.guard';
 
 import { ProductsModule } from 'src/products/products.module';
 import { AdminModule } from 'src/admin/admin.module';
@@ -55,7 +57,14 @@ import serverConfig from '@/config/server';
     AdminModule,
   ],
   controllers: [AppController],
-  providers: [AppService, Logger],
+  providers: [
+    AppService,
+    Logger,
+    // {
+    //   provide: APP_GUARD,
+    //   useClass: RolesGuard,
+    // },
+  ],
 })
 export class AppModule {
   constructor(private configService: ConfigService) {}
