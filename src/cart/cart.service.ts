@@ -23,9 +23,13 @@ export class CartService {
 
     const products = await this.productsService.findAllByIds(productIds);
 
+    console.log(products);
+
     const returnedCart = data.cart.map((cartItem) => {
       return {
-        product: products.find((p) => (p as any)._id === cartItem.productId),
+        product: products.find(
+          (p) => (p as any)._id.toString() === cartItem.productId,
+        ),
         quantity: cartItem.quantity,
       };
     });
@@ -34,7 +38,6 @@ export class CartService {
   }
 
   update(email: string, updateCartDto: UpdateCartDto) {
-    console.log(updateCartDto);
     return this.usersService.updateCart(email, updateCartDto);
   }
 

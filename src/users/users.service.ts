@@ -55,14 +55,18 @@ export class UsersService {
     return;
   }
 
-  async updateCart(email: string, cart: UpdateCartDto) {
-    this.userModel.findOneAndUpdate(
+  async updateCart(email: string, updateCartDto: UpdateCartDto) {
+    const data = await this.userModel.findOneAndUpdate(
       { email },
       {
         $set: {
-          cart,
+          cart: updateCartDto,
         },
       },
     );
+    const dataJson = data.toJSON();
+    delete dataJson.password;
+
+    return dataJson;
   }
 }

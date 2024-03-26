@@ -53,7 +53,7 @@ export class ProductsService {
 
   async findAllByIds(productIds: string[]): Promise<Product[]> {
     return this.productModel.find({
-      _ids: {
+      _id: {
         $in: productIds,
       },
     });

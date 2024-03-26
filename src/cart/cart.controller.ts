@@ -26,21 +26,20 @@ export class CartController {
   @Get()
   findAll(@Request() request: Request) {
     const { sub: email } = request['user'];
-    console.log(email);
     return this.cartService.findAll(email);
   }
 
   @UseGuards(AuthGuard)
   @Put()
   update(@Request() request: Request, @Body() updateCartDto: UpdateCartDto) {
-    const { email } = request['user'];
+    const { sub: email } = request['user'];
     return this.cartService.update(email, updateCartDto);
   }
 
   @UseGuards(AuthGuard)
   @Delete()
   remove(@Request() request: Request) {
-    const { email } = request['user'];
+    const { sub: email } = request['user'];
     return this.cartService.remove(email);
   }
 }
