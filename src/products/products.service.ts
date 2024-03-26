@@ -17,16 +17,46 @@ export class ProductsService {
     return this.productModel.create(product);
   }
 
-  async findAll(category?: string): Promise<Product[]> {
+  async findAll(
+    category?: string,
+    page?: string,
+  ): Promise<{ page: number; count: number; products: Product[] }> {
     let filter = {};
 
     if (category) {
       filter = { category };
     }
-    return this.productModel
+
+    let inferredPage = 1;
+
+    if (page) {
+      if (!isNaN(+page)) {
+        inferredPage = +page;
+      }
+    }
+
+    const count = await this.productModel.countDocuments(filter);
+
+    const products = await this.productModel
       .find(filter)
       .select(['title', 'category', 'price', 'image', 'rating'])
+      .skip((inferredPage - 1) * 10)
+      .limit(10)
       .exec();
+
+    return {
+      count,
+      page: inferredPage,
+      products,
+    };
+  }
+
+  async findAllByIds(productIds: string[]): Promise<Product[]> {
+    return this.productModel.find({
+      _ids: {
+        $in: productIds,
+      },
+    });
   }
 
   async findOne(id: string): Promise<Product> {

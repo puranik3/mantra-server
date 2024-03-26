@@ -45,7 +45,7 @@ export class ProductsController {
 
   @Get()
   findAll(@Query() query: Record<string, string>) {
-    return this.productsService.findAll(query.category);
+    return this.productsService.findAll(query.category, query.page);
   }
 
   @Get(':id')

@@ -87,7 +87,7 @@ export class Product {
       },
     }),
   )
-  rating: Record<string, string>;
+  rating: Record<string, number>;
 
   @Prop({
     type: [Review],

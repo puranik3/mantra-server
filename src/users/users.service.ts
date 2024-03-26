@@ -4,6 +4,7 @@ import { Model } from 'mongoose';
 import { User } from './entities/user.entity';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
+import { UpdateCartDto } from '@/cart/dto/update-cart.dto';
 
 @Injectable()
 export class UsersService {
@@ -52,5 +53,16 @@ export class UsersService {
   async remove(id: string) {
     await this.userModel.findByIdAndDelete(id);
     return;
+  }
+
+  async updateCart(email: string, cart: UpdateCartDto) {
+    this.userModel.findOneAndUpdate(
+      { email },
+      {
+        $set: {
+          cart,
+        },
+      },
+    );
   }
 }

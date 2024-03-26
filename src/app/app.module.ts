@@ -10,6 +10,7 @@ import { AppService } from './app.service';
 import { ProductsModule } from 'src/products/products.module';
 import { AdminModule } from 'src/admin/admin.module';
 import { UsersModule } from 'src/users/users.module';
+import { CartModule } from '@/cart/cart.module';
 import { AuthModule } from 'src/auth/auth.module';
 
 import authConfig from '@/config/auth';
@@ -49,6 +50,7 @@ import serverConfig from '@/config/server';
     }),
     ProductsModule,
     UsersModule,
+    CartModule,
     AuthModule,
     AdminModule,
   ],
